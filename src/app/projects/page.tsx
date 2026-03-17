@@ -110,8 +110,7 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="animate-fade-up mt-4 max-w-3xl text-zinc-300">
-          Hardware first, then software. Click any project to open a full detail
-          page with deeper context, implementation notes, skills, and external links.
+          Click any project to open a  detail page with more context, implementation notes, skills, and external links.
         </p>
       </section>
 
