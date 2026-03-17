@@ -205,7 +205,7 @@ export const projects: ProjectEntry[] = [
     mediaStyle: "wide",
     period: "March 2026",
     shortDescription:
-      "A legal research assistant with hybrid retrieval, citation validation, and a streaming interface for trustworthy statute exploration.",
+      "A legal research assistant with hybrid retrieval, citation validation, and a streaming interface for trustworthy Canadian Federal statute exploration.",
     fullDescription: [
       "Built for Hack Canada, SpecterBot combines vector retrieval and full-text search to surface highly relevant legal passages quickly.",
       "Every citation is validated against source windows before presentation, reducing hallucination risk and strengthening trust in responses.",
