@@ -1,65 +1,58 @@
+import Link from "next/link";
 import Image from "next/image";
+import { profile } from "@/data/projects";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="h-screen overflow-hidden bg-gradient-to-br from-[#090b12] via-[#0f1527] to-[#111126] text-foreground">
+      <section className="mx-auto grid h-full max-w-6xl items-center gap-10 px-6 py-8 sm:px-10 lg:grid-cols-2">
+        <div>
+          <p className="animate-fade-in text-sm tracking-[0.2em] text-indigo-300">
+            PROJECT PORTFOLIO
           </p>
+          <h1 className="animate-fade-up mt-4 bg-gradient-to-r from-indigo-200 via-sky-200 to-violet-200 bg-clip-text text-6xl font-semibold tracking-tight text-transparent sm:text-8xl">
+            BEN BRAKE
+          </h1>
+          <p className="animate-fade-up-delay-2 mt-8 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
+            I'm a Mechatronics Engineering student at the University of Waterloo with experience in PCB design 
+            and robotics. Currently an Electrical Team Member at the Waterloo Aerial Robotics Group (a design team at UWaterloo), 
+            working on circuit design and hardware bring-up for autonomous drones. 
+            Outside of engineering, I enjoy waterskiing, playing piano and guitar, and dirt biking.
+          </p>
+
+          <div className="animate-fade-up-delay-2 mt-12 flex flex-wrap gap-4">
+            <Link
+              href="/projects"
+              className="rounded-full bg-indigo-500 px-7 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-1 hover:bg-indigo-400"
+            >
+              View All Projects
+            </Link>
+            <a
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-indigo-400/60 bg-indigo-500/10 px-7 py-3 text-sm font-medium text-indigo-100 transition-transform duration-300 hover:-translate-y-1"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="animate-fade-up-delay-2">
+          <div className="relative flex h-[30rem] items-center justify-center overflow-hidden rounded-3xl border border-zinc-700 bg-gradient-to-br from-indigo-500/15 via-sky-500/10 to-violet-500/15 p-6 shadow-[0_0_60px_rgba(56,189,248,0.08)]">
+            <div className="absolute -right-10 bottom-8 h-44 w-44 rounded-full bg-sky-400/35 blur-2xl" />
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-2xl border border-zinc-600/70 bg-zinc-900/70">
+              <Image
+                src="/ME!.jpg"
+                alt="Ben Brake"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
