@@ -223,7 +223,7 @@ export const projects: ProjectEntry[] = [
     ],
     imageLabel: "SpecterBot",
     media: [
-      { type: "image", label: "SpecterBot", src: "/specterbot.png" },
+      { type: "image", label: "SpecterBot", src: "/SpecterBot.png" },
       { type: "image", label: "SpecterBot Web", src: "/specterbotweb.png" },
     ],
   },
