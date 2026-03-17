@@ -110,7 +110,7 @@ export const projects: ProjectEntry[] = [
     mediaStyle: "standard",
     period: "In Progress",
     shortDescription:
-      "An in-progress adapter board designed for WARG to centralize EFS programming/validation connectivity with configurable output voltage support.",
+      "An in-progress adapter board designed for WARG to centralize embedded programming/validation connectivity with configurable output voltage support.",
     fullDescription: [
       "This board is being developed to eliminate custom harnesses during embedded flight systems validation on WARG by consolidating key connectors into one programmable interface.",
       "The design includes configurable output behavior with a PD IC (3.3V output and 5V switchability), plus STLINK-V3MODS support for straightforward USB programming.",
