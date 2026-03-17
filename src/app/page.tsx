@@ -14,7 +14,7 @@ export default function Home() {
             BEN BRAKE
           </h1>
           <p className="animate-fade-up-delay-2 mt-8 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
-            I'm a Mechatronics Engineering student at the University of Waterloo with experience in PCB design 
+            I&apos;m a Mechatronics Engineering student at the University of Waterloo with experience in PCB design 
             and robotics. Currently an Electrical Team Member at the Waterloo Aerial Robotics Group (a design team at UWaterloo), 
             working on circuit design and hardware bring-up for autonomous drones. 
             Outside of engineering, I enjoy waterskiing, playing piano and guitar, and dirt biking.
@@ -43,10 +43,10 @@ export default function Home() {
             <div className="absolute -right-10 bottom-8 h-44 w-44 rounded-full bg-sky-400/35 blur-2xl" />
             <div className="relative z-10 h-full w-full overflow-hidden rounded-2xl border border-zinc-600/70 bg-zinc-900/70">
               <Image
-                src="/ME!.jpg"
+                src="/profilephoto.JPG"
                 alt="Ben Brake"
                 fill
-                className="object-cover"
+                className="object-cover object-bottom"
                 priority
               />
             </div>

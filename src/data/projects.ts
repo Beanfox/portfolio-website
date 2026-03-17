@@ -78,18 +78,18 @@ export const projects: ProjectEntry[] = [
     mediaStyle: "standard",
     period: "October 2025 – December 2025",
     shortDescription:
-      "A custom PCB designed in Altium, ordered through PCBWay, repaired through precise rework, and programmed via ATTINY85 using an Arduino UNO as ISP.",
+      "A custom PCB designed in Altium, ordered through PCBWay, repaired through precise rework, and programmed via ATtiny85 using an Arduino UNO as ISP.",
     fullDescription: [
       "I designed this board in Altium Designer and had it manufactured through PCBWay, then performed careful post-manufacturing rework when some LED diode placements needed correction.",
-      "To program U1 (ATTINY85-20SU), I converted an Arduino UNO into an ISP programmer and soldered temporary jumper wires to the correct pads for flashing.",
+      "To program U1 (ATtiny85-20SU), I converted an Arduino UNO into an ISP programmer and soldered temporary jumper wires to the correct pads for flashing.",
       "After successful programming, I removed the temporary wires with care to avoid bridging, then validated USB-powered operation and the heartbeat-style LED animation.",
     ],
     bullets: [
-      "Programmed U1 (ATTINY85-20SU) using an Arduino UNO converted into an ISP programmer.",
-      "Temporarily soldered jumper wires to the required pads to flash firmware, then removed them carefully to avoid bridging adjacent legs.",
+      "Programmed U1 (ATtiny85-20SU) using an Arduino UNO converted into an ISP programmer.",
+      "Temporarily soldered jumper wires to the required pads to flash firmware, then removed them carefully to avoid bridging.",
       "Enabled micro USB power and programmed LED behavior to create a beating-heart border animation.",
     ],
-    skills: ["Altium Designer", "PCB Design", "Soldering", "ATTINY85", "Arduino ISP"],
+    skills: ["Altium Designer", "PCB Design", "Soldering", "Microcontroller"],
     links: [
       {
         label: "Heart PCB Link",
@@ -110,9 +110,9 @@ export const projects: ProjectEntry[] = [
     mediaStyle: "standard",
     period: "In Progress",
     shortDescription:
-      "An in-progress adapter board designed to centralize EFS programming/validation connectivity with configurable output voltage support.",
+      "An in-progress adapter board designed for WARG to centralize EFS programming/validation connectivity with configurable output voltage support.",
     fullDescription: [
-      "This board is being developed to eliminate custom harnesses during embedded flight systems validation by consolidating key connectors into one programmable interface.",
+      "This board is being developed to eliminate custom harnesses during embedded flight systems validation on WARG by consolidating key connectors into one programmable interface.",
       "The design includes configurable output behavior with a PD IC (3.3V output and 5V switchability), plus STLINK-V3MODS support for straightforward USB programming.",
       "I am currently iterating schematic and layout decisions around the STM32L433 integration to make the board robust and practical for repeated validation cycles.",
     ],

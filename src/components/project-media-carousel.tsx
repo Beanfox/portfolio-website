@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 type MediaItem = {
   type: "image" | "video";
@@ -51,9 +52,11 @@ export default function ProjectMediaCarousel({
         className={`relative flex w-full items-center justify-center overflow-hidden rounded-3xl border border-dashed border-zinc-600 bg-gradient-to-br from-indigo-500/10 via-zinc-900 to-sky-500/10 text-zinc-300 ${mediaAspectClass}`}
       >
         {backdropSrc && (
-          <img
+          <Image
             src={backdropSrc}
             alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 70vw"
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-35 blur-3xl"
           />
@@ -72,9 +75,11 @@ export default function ProjectMediaCarousel({
             <div className="px-4 text-center text-lg font-medium">{active.label}</div>
           )
         ) : active.src ? (
-          <img
+          <Image
             src={active.src}
             alt={active.label}
+            fill
+            sizes="(max-width: 768px) 100vw, 70vw"
             className="pointer-events-none relative z-10 h-full w-full bg-zinc-950/60 object-contain p-2"
           />
         ) : (

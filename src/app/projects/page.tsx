@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { hardwareProjects, profile, softwareProjects } from "@/data/projects";
 
 function ProjectCard({
@@ -39,9 +40,11 @@ function ProjectCard({
         >
           <div className="card-shimmer absolute inset-0 bg-[linear-gradient(110deg,transparent,rgba(255,255,255,.45),transparent)]" />
           {previewMedia?.src && (
-            <img
+            <Image
               src={previewMedia.src}
               alt=""
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               aria-hidden="true"
               className="pointer-events-none absolute inset-0 h-full w-full scale-110 object-cover opacity-35 blur-2xl"
             />
@@ -57,10 +60,11 @@ function ProjectCard({
               <source src={previewMedia.src} />
             </video>
           ) : previewMedia?.src ? (
-            <img
+            <Image
               src={previewMedia.src}
               alt={previewMedia.label}
-              loading="lazy"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="relative z-10 h-full w-full bg-zinc-950/60 object-contain p-2"
             />
           ) : (
