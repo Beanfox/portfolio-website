@@ -60,7 +60,6 @@ export const projects: ProjectEntry[] = [
     ],
     imageLabel: "Raspberry Pi Emulator",
     media: [
-      { type: "image", label: "Emulator Photo 1", src: "/1763776991900.jpg" },
       {
         type: "video",
         label: "Gameplay Demo",
