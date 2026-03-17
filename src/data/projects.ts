@@ -67,7 +67,12 @@ export const projects: ProjectEntry[] = [
         label: "Emulator Build",
         src: "/EmulatorRaspberryPi-removebg-preview.png",
       },
-      { type: "video", label: "Gameplay Demo Video Placeholder" },
+      {
+        type: "video",
+        label: "Gameplay Demo",
+        src: "/emulator_vid.mp4",
+        poster: "/1763776991900.jpg",
+      },
     ],
   },
   {
