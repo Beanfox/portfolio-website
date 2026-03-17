@@ -15,9 +15,9 @@ export default function Home() {
           </h1>
           <p className="animate-fade-up-delay-2 mt-8 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
             I'm a Mechatronics Engineering student at the University of Waterloo with experience in PCB design 
-            and robotics. Currently an Electrical Team Member at the Waterloo Aerial Robotics Group (a design team at UWaterloo), 
+            and robotics. Currently an electrical team member at the Waterloo Aerial Robotics Group (a design team at UWaterloo), 
             working on circuit design in Altium Designer, and hardware bring-up for drones. 
-            Outside of engineering, I enjoy waterskiing, playing piano and fishing.
+            Outside of engineering, I enjoy waterskiing, playing piano and guitar, and fishing.
           </p>
 
           <div className="animate-fade-up-delay-2 mt-12 flex flex-wrap gap-4">
