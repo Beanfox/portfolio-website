@@ -4,8 +4,8 @@ import { profile } from "@/data/projects";
 
 export default function Home() {
   return (
-    <main className="h-screen overflow-hidden bg-gradient-to-br from-[#090b12] via-[#0f1527] to-[#111126] text-foreground">
-      <section className="mx-auto grid h-full max-w-6xl items-center gap-10 px-6 py-8 sm:px-10 lg:grid-cols-2">
+    <main className="min-h-screen bg-gradient-to-br from-[#090b12] via-[#0f1527] to-[#111126] text-foreground">
+      <section className="mx-auto grid min-h-screen max-w-6xl items-center gap-10 px-6 py-8 sm:px-10 lg:grid-cols-2">
         <div>
           <p className="animate-fade-in text-sm tracking-[0.2em] text-indigo-300">
             PROJECT PORTFOLIO
