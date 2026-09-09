@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { hardwareProjects, profile, softwareProjects } from "@/data/projects";
+import { hardwareProjects, profile } from "@/data/projects";
 
 function ProjectCard({
   slug,
@@ -98,9 +98,6 @@ export default function ProjectsPage() {
             <a href="#hardware" className="hover:text-indigo-200">
               Hardware
             </a>
-            <a href="#software" className="hover:text-indigo-200">
-              Software
-            </a>
           </div>
         </nav>
       </header>
@@ -118,15 +115,6 @@ export default function ProjectsPage() {
         <h2 className="mb-6 text-2xl font-semibold tracking-tight text-zinc-100">Hardware Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {hardwareProjects.map((project) => (
-            <ProjectCard key={project.slug} {...project} />
-          ))}
-        </div>
-      </section>
-
-      <section id="software" className="mx-auto max-w-6xl px-6 pb-20 sm:px-10">
-        <h2 className="mb-6 text-2xl font-semibold tracking-tight text-zinc-100">Software Projects</h2>
-        <div className="grid gap-8 md:grid-cols-2">
-          {softwareProjects.map((project) => (
             <ProjectCard key={project.slug} {...project} />
           ))}
         </div>

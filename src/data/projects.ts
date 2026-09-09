@@ -1,4 +1,4 @@
-export type ProjectCategory = "hardware" | "software";
+export type ProjectCategory = "hardware";
 
 export type ProjectLink = {
   label: string;
@@ -75,38 +75,6 @@ export const projects: ProjectEntry[] = [
     ],
   },
   {
-    slug: "heart-pcb",
-    title: "Heart PCB",
-    category: "hardware",
-    sortOrder: 202509,
-    mediaStyle: "standard",
-    period: "October 2025 – December 2025",
-    shortDescription:
-      "A custom PCB designed in Altium, ordered through PCBWay, repaired through precise rework, and programmed via ATtiny85 using an Arduino UNO as ISP.",
-    fullDescription: [
-      "I designed this board in Altium Designer and had it manufactured through PCBWay, then performed careful post-manufacturing rework when some LED diode placements needed correction.",
-      "To program U1 (ATtiny85-20SU), I converted an Arduino UNO into an ISP programmer and soldered temporary jumper wires to the correct pads for flashing.",
-      "After successful programming, I removed the temporary wires with care to avoid bridging, then validated USB-powered operation and the heartbeat-style LED animation.",
-    ],
-    bullets: [
-      "Programmed U1 (ATtiny85-20SU) using an Arduino UNO converted into an ISP programmer.",
-      "Temporarily soldered jumper wires to the required pads to flash firmware, then removed them carefully to avoid bridging.",
-      "Enabled micro USB power and programmed LED behavior to create a beating-heart border animation.",
-    ],
-    skills: ["Altium Designer", "PCB Design", "Soldering", "Microcontroller"],
-    links: [
-      {
-        label: "Heart PCB Link",
-        url: "https://docs.google.com/document/d/1Ax5auCjvafiQIizRYwfxvnMmLHJK5YUPhNFRELVosqI/edit?usp=sharing",
-      },
-    ],
-    imageLabel: "Heart PCB",
-    media: [
-      { type: "image", label: "Heart PCB Back", src: "/HeartPCB2.png" },
-      { type: "image", label: "Heart PCB Front", src: "/HeartPCB.png" },
-    ],
-  },
-  {
     slug: "programming-adapter-rev-2",
     title: "Programming Adapter Rev. 2",
     category: "hardware",
@@ -164,78 +132,10 @@ export const projects: ProjectEntry[] = [
       { type: "image", label: "LDO Schematic", src: "/LDO_Schematic.png" },
     ],
   },
-  {
-    slug: "6ix-streets",
-    title: "6IX STREETS",
-    category: "software",
-    sortOrder: 202603,
-    mediaStyle: "wide",
-    period: "March 2026",
-    shortDescription:
-      "A real-time urban traffic optimization engine using a Decision Transformer and an offline reinforcement learning backend to proactively route flow across a 36-node city grid.",
-    fullDescription: [
-      "Built for GenAI Genesis 2026, this project frames traffic management as a sequence modeling task instead of traditional timer-based control.",
-      "The system uses returns-to-go logic and offline reinforcement learning signals to make forward-looking optimization decisions based on density, queues, and wait times.",
-      "A real-time dashboard makes routing behavior transparent and visually debuggable through live intersection and network-state views.",
-    ],
-    bullets: [
-      "Implemented a Decision Transformer in PyTorch utilizing returns-to-go logic to learn optimization strategies.",
-      "Engineered an offline reinforcement learning backend to analyze queue lengths, wait times, and capacities, achieving a 22.3% improvement from baseline.",
-      "Generated an expert trajectory dataset of 360,000 data points via a custom mathematical heuristic/reward system.",
-      "Developed a React and Tailwind CSS dashboard with a live intersection viewer for real-time grid density and routing decisions.",
-    ],
-    skills: ["Python", "System Architecture", "PyTorch", "React", "Tailwind CSS"],
-    links: [
-      { label: "Devpost", url: "https://devpost.com/software/6ix-streets" },
-    ],
-    imageLabel: "6IX STREETS",
-    media: [
-      { type: "image", label: "6IX STREETS", src: "/A.png" },
-      {
-        type: "image",
-        label: "6IX STREETS Screenshot 2",
-        src: "/sixstreets-screenshot-2.png",
-      },
-    ],
-  },
-  {
-    slug: "specterbot",
-    title: "SpecterBot",
-    category: "software",
-    sortOrder: 202602,
-    mediaStyle: "wide",
-    period: "March 2026",
-    shortDescription:
-      "A legal research assistant with hybrid retrieval, citation validation, and a streaming interface for trustworthy Canadian Federal statute exploration.",
-    fullDescription: [
-      "Built for Hack Canada, SpecterBot combines vector retrieval and full-text search to surface highly relevant legal passages quickly.",
-      "Every citation is validated against source windows before presentation, reducing hallucination risk and strengthening trust in responses.",
-      "The product includes ETL ingestion of Justice Canada XML data into PostgreSQL plus an interactive front-end with graph and voice elements.",
-    ],
-    bullets: [
-      "Built hybrid search combining vector embeddings and full-text search for high-precision legal retrieval.",
-      "Implemented hallucination protection by validating every cited statute against the source window before display.",
-      "Created an ETL pipeline ingesting Justice Canada's XML corpus into structured PostgreSQL.",
-      "Shipped a streaming UI with legal graph visualization and ElevenLabs voice integration.",
-    ],
-    skills: ["Python", "System Architecture", "PostgreSQL", "ETL", "Vector Search"],
-    links: [
-      { label: "Devpost", url: "https://devpost.com/software/statutelens" },
-    ],
-    imageLabel: "SpecterBot",
-    media: [
-      { type: "image", label: "SpecterBot", src: "/SpecterBot.png" },
-      { type: "image", label: "SpecterBot Web", src: "/specterbotweb.png" },
-    ],
-  },
 ];
 
 export const hardwareProjects = projects.filter(
   (project) => project.category === "hardware",
-).sort((a, b) => b.sortOrder - a.sortOrder);
-
-export const softwareProjects = projects.filter(
-  (project) => project.category === "software",
 ).sort((a, b) => b.sortOrder - a.sortOrder);
 
 export const projectsBySlug = Object.fromEntries(
