@@ -94,11 +94,6 @@ export default function ProjectsPage() {
           <Link href="/" className="text-sm font-semibold tracking-[0.15em] text-indigo-100">
             {profile.name.toUpperCase()}
           </Link>
-          <div className="flex gap-5 text-sm text-zinc-300">
-            <a href="#hardware" className="hover:text-indigo-200">
-              Hardware
-            </a>
-          </div>
         </nav>
       </header>
 
@@ -107,12 +102,11 @@ export default function ProjectsPage() {
           Projects
         </h1>
         <p className="animate-fade-up mt-4 max-w-3xl text-zinc-300">
-          Click any project to open a  detail page with more context, implementation notes, skills, and external links.
+          Click any project to open a detail page with more context, implementation notes, skills, and external links.
         </p>
       </section>
 
-      <section id="hardware" className="mx-auto max-w-6xl px-6 pb-16 sm:px-10">
-        <h2 className="mb-6 text-2xl font-semibold tracking-tight text-zinc-100">Hardware Projects</h2>
+      <section className="mx-auto max-w-6xl px-6 pb-16 sm:px-10">
         <div className="grid gap-8 md:grid-cols-2">
           {hardwareProjects.map((project) => (
             <ProjectCard key={project.slug} {...project} />

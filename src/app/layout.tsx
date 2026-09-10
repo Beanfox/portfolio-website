@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ben Brake | Project Portfolio",
   description:
-    "Projects-only portfolio featuring hardware and software builds.",
+    "Projects-only portfolio featuring hardware builds.",
 };
 
 export default function RootLayout({
