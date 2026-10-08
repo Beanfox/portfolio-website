@@ -864,9 +864,10 @@ img { max-width: 100%; height: auto; display: block; }
             <span class="project-org-badge">Personal Project</span>
           </div>
           <ul class="project-bullets">
-            <li><strong>Problem:</strong> Lack of accessible, clip-on training tools that provide high-rate kinematic data (swing speed, tempo, plane, face angle).</li>
-            <li><strong>Built:</strong> Designed a custom 4-layer PCB in Altium with ESP32-S3 MCU, BMI270 IMU, battery management, and MicroPython firmware for BLE transmission.</li>
-            <li><strong>Outcome:</strong> Compact shaft-mounted sensor transmitting real-time motion metrics to a companion mobile app.</li>
+            <li><strong>Problem:</strong> Lack of accessible, clip-on training tools that provide high-rate kinematic data (swing speed, tempo, plane, face angle) at a cheap price.</li>
+            <li><strong>Designed:</strong> Custom 4-layer PCB in Altium with an ESP32-S3 MCU, BMI270 IMU, USB-C and Li-Po charging. MicroPython firmware for BLE streaming is in development.</li>
+            <li><strong>Status:</strong> Rev A boards fabricated; bring-up and testing are next. The goal is a compact shaft-mounted sensor streaming real-time motion metrics.</li>
+            <li><strong>Known issue (Rev A):</strong> The battery charges but isn't connected to the 3.3V regulator's input, so the board runs from USB power only. The Rev B fix is a diode-OR (or ideal-diode) power path so the regulator can draw from either USB or the battery.</li>
           </ul>
         </div>
       </article>
